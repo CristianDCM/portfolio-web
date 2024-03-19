@@ -2,6 +2,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import 'animate.css';
 
 export const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="contact" id="contact"> 
       <Container>
@@ -9,8 +12,8 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
-              <form name="contact v1" method="POST" data-netlify="true" onSubmit="submit"> 
-                <input type="hidden" name="form-name" value="contact v1" />
+              <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required />
