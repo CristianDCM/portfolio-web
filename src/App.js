@@ -7,6 +7,11 @@ import { AboutMe } from "./components/AboutMe";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";//Manejo de animaciones en la pagina
+AOS.init({
+  duration: 500,
+});
 
 function App() {
   return (
