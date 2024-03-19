@@ -14,10 +14,9 @@ export const Contact = () => {
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
   };
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelector("form").addEventListener("submit", handleSubmit);
-    }
-  );
+  document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
     return (
     <section className="contact" id="contact"> 
       <Container>
@@ -27,6 +26,7 @@ export const Contact = () => {
               <h2 data-aos="fade-right">Contact</h2>
               <form name="contact" method="POST" data-netlify="true"> 
                 <Row>
+                  <input type="hidden" name="form-name" value="contact" /> 
                   <Col size={12} sm={6} className="px-1">
                     <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required />
                   </Col>
