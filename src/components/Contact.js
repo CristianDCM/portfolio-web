@@ -12,7 +12,7 @@ export const Contact = () => {
               <form name="contact" method="post" data-netlify="true">
                 <Row>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="contact"/>
                     <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
