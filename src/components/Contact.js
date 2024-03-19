@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import 'animate.css';
+import { useState } from "react";
 
 export const Contact = () => {
   const [name, setName] = useState('');
