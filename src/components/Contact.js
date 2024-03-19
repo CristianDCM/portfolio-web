@@ -9,20 +9,19 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
-              <form name="contact" netlify>
+              <form name="contact" id="contact" netlify>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="hidden" name="form-name" value="contact"/>
-                    <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required/>
+                    <input type="text" name="name" placeholder="First Name" data-aos="zoom-in-right" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="last-name" placeholder="Last Name" data-aos="zoom-in-right" required/>
+                    <input type="text" name="name" placeholder="Last Name" data-aos="zoom-in-right" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input type="email" name="email" placeholder="Email Address" data-aos="zoom-in-left" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="tel" name="phone" placeholder="Phone" data-aos="zoom-in-left" required/>
+                    <input type="tel" name="tel" placeholder="Phone" data-aos="zoom-in-left" required/>
                   </Col>
                   <Col size={12} className="px-1" date-aos="fade-up">
                     <textarea rows="6" name="message" placeholder="Message" data-aos="zoom-in" required></textarea>
