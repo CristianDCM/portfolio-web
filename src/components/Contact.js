@@ -4,6 +4,17 @@ import 'animate.css';
 export const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    const form = event.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => {
+        form.reset();
+        alert("Gracias por tu mensaje, te contactaré pronto.");
+      })
+      .catch((error) => alert(error));
   };
   return (
     <section className="contact" id="contact"> 
