@@ -9,7 +9,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
-              <form name="contact" data-netlify="true" method="post">
+              <form name="contact">
                 <Row>
                   <input type="hidden" name="form-name" value="contact" />
                   <Col size={12} sm={6} className="px-1">
@@ -37,5 +37,3 @@ export const Contact = () => {
     </section>
   )
 };
-
-export default Contact;
