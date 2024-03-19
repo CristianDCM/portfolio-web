@@ -3,10 +3,11 @@ import 'animate.css';
 import { useState } from "react";
 
 export const Contact = () => {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [tel, setTel] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   return (
     <section className="contact" id="contact"> 
       <Container>
@@ -18,16 +19,16 @@ export const Contact = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <Row>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" value={name} onChange={(e) => setName(e.target.value)} required/>
+                    <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="last-name" placeholder="Last Name" data-aos="zoom-in-right" value={name} onChange={(e) => setName(e.target.value)} required/>
+                    <input type="text" name="last-name" placeholder="Last Name" data-aos="zoom-in-right" value={lastName} onChange={(e) => setLastName(e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input type="email" name="email" placeholder="Email Address" data-aos="zoom-in-left" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="tel" name="tel" placeholder="Phone" data-aos="zoom-in-left" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    <input type="tel" name="tel" placeholder="Phone" data-aos="zoom-in-left" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                   </Col>
                   <Col size={12} className="px-1" date-aos="fade-up">
                     <textarea rows="6" name="message" placeholder="Message" data-aos="zoom-in" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
