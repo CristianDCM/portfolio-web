@@ -9,14 +9,14 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
-              <form name="contact">
+              <form name="contact" method="post" data-netlify="true">
                 <Row>
-                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="form-name" value="contact"/>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required/>
+                    <input type="text" name="firstname" placeholder="First Name" data-aos="zoom-in-right" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="last-name" placeholder="Last Name" data-aos="zoom-in-right" required/>
+                    <input type="text" name="lastname" placeholder="Last Name" data-aos="zoom-in-right" required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input type="email" name="email" placeholder="Email Address" data-aos="zoom-in-left" required/>
