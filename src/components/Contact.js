@@ -14,9 +14,10 @@ export const Contact = () => {
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
   };
-  document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("contact");
+    form.addEventListener("submit", handleSubmit);
+  });
     return (
     <section className="contact" id="contact"> 
       <Container>
