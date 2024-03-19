@@ -3,18 +3,29 @@ import 'animate.css';
 
 export const Contact = () => {
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(event.target);
+    event.preventDefault();  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
   };
-  return (
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector("form").addEventListener("submit", handleSubmit);
+    }
+  );
+    return (
     <section className="contact" id="contact"> 
       <Container>
         <Row className="align-items-center justify-content-center">
           <Col size={12} md={6}>
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
-              <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                <input type="hidden" name="form-name" value="contact" />
+              <form name="contact" method="POST" data-netlify="true"> 
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input type="text" name="first-name" placeholder="First Name" data-aos="zoom-in-right" required />
