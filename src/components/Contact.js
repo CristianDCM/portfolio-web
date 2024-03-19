@@ -4,13 +4,7 @@ import 'animate.css';
 export const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    fetch('/', {
-      method: 'POST',
-      body: formData,
-    })
-      .then(() => console.log('Formulario enviado'))
-      .catch((error) => console.error('Error al enviar el formulario:', error));
+    console.log(event.target);
   };
   return (
     <section className="contact" id="contact"> 
