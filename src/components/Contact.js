@@ -20,23 +20,21 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    const form = e.target;
-    const formData = new FormData(form);
-    let response = await fetch("/",{
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+    fetch("/",{
       method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"},
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
-    });
+    })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
     setButtonText("Send");
-    let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
   };
+  document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
   return (
     <section className="contact" id="contact"> 
       <Container>
