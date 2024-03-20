@@ -13,24 +13,27 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
-  
   const onFormUpdate = (category, value) => {
   setFormDetails({ ...formDetails, [category]: value });
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
     const myForm = e.target;
     const formData = new FormData(myForm);
-    fetch("/",{
+    setButtonText("Sending...");
+    let response = await fetch("/",{
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
     setButtonText("Send");
+    let result = await response.json();
     setFormDetails(formInitialDetails);
+    if (result.code == 200) {
+      setStatus({ succes: true, message: 'Message sent successfully'});
+    } else {
+      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+    }
   };
   return (
     <section className="contact" id="contact"> 
