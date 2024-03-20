@@ -20,15 +20,13 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+    const form = e.target;
+    const formData = new FormData(form);
     let response = await fetch("/",{
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: encode({
-        "form-name": "contactNtfy",
-        ...formDetails
-      }),
+        "Content-Type": "application/x-www-form-urlencoded"},
+      body: new URLSearchParams(formData).toString(),
     });
     setButtonText("Send");
     let result = await response.json();
