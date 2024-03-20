@@ -33,6 +33,7 @@ export const Contact = () => {
       setStatus({ succes: true, message: 'Message sent successfully'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+      console.log(response);
     }
   };
   return (
