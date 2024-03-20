@@ -17,7 +17,7 @@ export const Contact = () => {
   const onFormUpdate = (category, value) => {
   setFormDetails({ ...formDetails, [category]: value });
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
     const myForm = e.target;
@@ -73,9 +73,3 @@ export const Contact = () => {
     </section>
   )
 };
-
-function encode(data) {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
