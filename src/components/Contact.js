@@ -17,7 +17,7 @@ export const Contact = () => {
   const onFormUpdate = (category, value) => {
   setFormDetails({ ...formDetails, [category]: value });
   }
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
     const myForm = e.target;
@@ -32,9 +32,6 @@ export const Contact = () => {
     setButtonText("Send");
     setFormDetails(formInitialDetails);
   };
-  document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
   return (
     <section className="contact" id="contact"> 
       <Container>
