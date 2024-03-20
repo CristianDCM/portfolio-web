@@ -7,6 +7,7 @@ import { AboutMe } from "./components/AboutMe";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";//Manejo de animaciones en la pagina
 AOS.init({
@@ -14,6 +15,11 @@ AOS.init({
 });
 
 function App() {
+  useEffect(() => {
+    fetch("/api")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+  },[])
   return (
     <div className="App">
       <NavBar />
