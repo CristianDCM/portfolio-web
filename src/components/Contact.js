@@ -21,15 +21,15 @@ export const Contact = () => {
     const myForm = e.target;
     const formData = new FormData(myForm);
     setButtonText("Sending...");
-    let response = fetch("/",{
+    let response = await fetch("/",{ 
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
     setButtonText("Send");
-    // let result = await response.json();  
+    let result = await response.json();  
     setFormDetails(formInitialDetails);
-    if (response.ok) {
+    if (result.code === 200) {
       setStatus({ succes: true, message: 'Message sent successfully'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
