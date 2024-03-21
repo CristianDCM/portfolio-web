@@ -13,9 +13,11 @@ import "aos/dist/aos.css";
 AOS.init({
   duration: 500,
 });
-function App() {
-  useEffect(() => {
-    fetch("/api")
+
+const App = () => {
+  const [data, setData] = React.useState(null);
+  React.useEffect(() => {
+    fetch("/api") 
     .then((res) => res.json())
     .then((data) => console.log(data));
   },[])
