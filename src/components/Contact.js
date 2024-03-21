@@ -21,14 +21,14 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("/api/contact", {
+    const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
-    let data = await response.json();
+    const data = await response.json();
     setButtonText("Send");
     setFormDetails(formInitialDetails);
     if (data.code === 200) {
