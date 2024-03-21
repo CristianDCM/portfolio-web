@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, '../build'))); 
+app.use(express.static(path.resolve(__dirname, '../build')));
 app.use(cors());
 app.use(bodyParser.json());
 
