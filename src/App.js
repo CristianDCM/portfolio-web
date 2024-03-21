@@ -9,11 +9,10 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import React, { useEffect } from 'react';
 import AOS from "aos";
-import "aos/dist/aos.css";//Manejo de animaciones en la pagina
+import "aos/dist/aos.css";
 AOS.init({
   duration: 500,
 });
-
 function App() {
   useEffect(() => {
     fetch("/api")
