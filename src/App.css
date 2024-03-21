@@ -15,6 +15,12 @@
 	font-weight: 400;
 }
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #0a0a0a;  
+  --text-nav-color: 0, 0%, 63%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,11 +32,22 @@ html {
   /* scroll-padding-top: 75px; */
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+
 body {
   font-weight: 400;   
   overflow-x: hidden; 
   position: relative;
-  background-color: #151515 !important;
+  background-color: var(--primary-color) !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -88,8 +105,8 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
-  background-color: rgb(255 255 255 / 0%);
-  backdrop-filter: blur(50px); 
+  background-color: rgb(var(--secondary-color));
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(50px); 
 } 
 /*Responsive del navbar*/
@@ -110,7 +127,7 @@ nav.navbar a.navbar-brand {
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: var(--text-nav-color)!important;
   letter-spacing: 0.8px;
   padding: 20px 25px; /*Tamaño Navbar links*/
   font-size: 18px;
@@ -119,9 +136,11 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    background: #f1f1f1;
     opacity: 1;
-    /* background: linear-gradient(90.21deg, #8718F8 -5.91%, #AA367C 111.58%); */
-}
+    font-weight: 500;
+    color: #000!important;
+  }
 
 span.navbar-text {
     display: flex;
@@ -150,12 +169,12 @@ span.navbar-text {
 .social-icon a {
     width: 42px;
     height: 42px;
-    background: rgba(217, 217, 217, 0.1);
+    background: var(--secondary-color);
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
     margin-right: 5px;
@@ -319,10 +338,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 /************ About Css ************/
 .about {
-  background-color: #1F1F1F;
+  background-color: var(--secondary-color);
   width: 100%;
   height: auto;
-  padding: 0 0 65px 0; /* Arriba, Derecha, Abajo, Izquier*/
+  padding: 0 0 65px 0;
 }
 .about h2 {
   font-size: 45px;
@@ -353,7 +372,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 70px 0;
   position: relative;
-  background-color: #151515;
+  background-color: var(--primary-color);
 }
 .skill-nav {
   padding: 0 0 20px 0; 
@@ -420,7 +439,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 0 0 85px 0;
   position: relative;
-  background-color: #1F1F1F;
+  background-color: var(--secondary-color);
   height: 630px;
 }
 .project h2 {
@@ -586,7 +605,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact {
   /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
   padding: 0 0 40px 0;
-  background-color: #151515;
+  background-color: var(--primary-color);
 }
 .contact img {
   width: 92%;
@@ -602,7 +621,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  /* border-radius: 6px; */
   color: #fff;
   margin: 0 0 8px 0;
   padding: 18px 26px;
@@ -662,7 +681,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  background-color: #1F1F1F;
+  background-color: var(--secondary-color);
   padding: 10px 0 0 0;
   margin-bottom: -25px;
 }
