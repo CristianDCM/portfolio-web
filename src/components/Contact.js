@@ -31,12 +31,12 @@ export const Contact = () => {
     const data = await response.json();
     setButtonText("Send");
     setFormDetails(formInitialDetails);
-    if (data.code === 200) {
-      setStatus({success: true, message: "Message Sent", code: 200});
-    }
-    else {
-      setStatus({success: false, message: "Message Failed", code: 400});
-    }
+    // if (data.code === 200) {
+    //   setStatus({success: true, message: "Message Sent", code: 200});
+    // }
+    // else {
+    //   setStatus({success: false, message: "Message Failed", code: 400});
+    // }
   }
 
   return (

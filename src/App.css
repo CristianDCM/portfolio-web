@@ -43,6 +43,8 @@ html::-webkit-scrollbar-track {
   background-color: var(--primary-color);
 }
 
+
+
 body {
   font-weight: 400;   
   overflow-x: hidden; 
@@ -590,7 +592,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txtx button:hover::before {
   width: 100%;
 }
-
 
 .background-image-right {
   top: 20%;
