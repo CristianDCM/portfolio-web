@@ -66,7 +66,6 @@ export const Projects = () => {
 
   return (
     <section className="project" id="projects">
-      <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
@@ -87,7 +86,7 @@ export const Projects = () => {
                       infinite={true}
                       autoPlay={true}
                       autoPlaySpeed={3000}
-                      className="owl-carousel owl-theme skill-slider"
+                      className="skill-slider"
                     >
                       {projects.map((project, index) => {
                         return (
@@ -103,7 +102,6 @@ export const Projects = () => {
             </TrackVisibility>
           </Col>
         </Row>
-      </Container>
     </section>
   );
 };

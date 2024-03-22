@@ -439,11 +439,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  padding: 0 0 85px 0;
+  padding: 0 40px 85px 40px; 
   position: relative;
   background-color: var(--secondary-color);
   height: 630px;
 }
+
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -451,74 +452,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-top: 6rem;
   padding-bottom: 20px;
 }
-
 .carousel-container {
   justify-content: center;
-}
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
-}
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
-}
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
-}
-.project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #8718F8 -5.91%, #AA367C 211.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-}
-.project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
-}
 
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 10px 0px 0px 10px;
 }
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 10px 10px 0;
+.item-tab {
+  justify-content: center;
+  display: flex;
 }
 .proj-imgbx {
   position: relative;
   /* border-radius: 10px; */
   overflow: hidden;
 }
-.item-tab {
-  justify-content: center;
-  display: flex;
-}
-
 .proj-imgbx::before {
   content: "";
   opacity: 0.85;
@@ -528,7 +474,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   transition: 0.5s;
 }
-
 .proj-imgbx:hover::before {
   height: 100%;
 }
