@@ -10,7 +10,6 @@ export const Contact = () => {
             <div className="animate__animated animate__fadeIn">
               <h2 data-aos="fade-right">Contact</h2>
               <form name="contact-ntl" method="post">
-                <input type="hidden" name="form-name" value="contact-ntl" method="post"/>
               <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input type="text" name="firstName" placeholder="First Name"/>
