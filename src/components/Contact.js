@@ -19,7 +19,7 @@ export const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setButtonText("Sending...");
+    setButtonText("Sending..");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -27,12 +27,11 @@ export const Contact = () => {
     })
     .then(() => {
       setButtonText("Sent!");
-      setFormDetails(formInitialDetails);
+      setFormDetails(formInitialDetails); 
     })
-    .catch((error) => {
-      console.error(error); 
-      setButtonText("Failed!");
-    });
+    // .catch((error) => {
+    //   setButtonText("Failed!:(");
+    // });
   };
 
   return (
