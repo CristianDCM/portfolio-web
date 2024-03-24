@@ -602,8 +602,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 10px;
-  border-radius: 0;
   position: relative;
+  border: 1px solid #fff;
   transition: 0.3s ease-in-out;
   /*En el centro*/
   display: block;
@@ -618,7 +618,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form button::before {
   content: "";
-  background: #121212;
+  background: #000;
   width: 0;
   height: 100%;
   position: absolute;

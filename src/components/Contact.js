@@ -12,10 +12,10 @@ export const Contact = () => {
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});  
   const onFormUpdate = (category, value) => {
     setFormDetails({...formDetails, [category]: value});
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setButtonText("Sending..");
@@ -25,12 +25,14 @@ export const Contact = () => {
       body: new URLSearchParams(new FormData(event.target)).toString()
     })
     .then(() => {
+      setFormDetails(formInitialDetails);
       setButtonText("Sent!");
-      setFormDetails(formInitialDetails); 
     })
     // .catch(() => {
     //   setButtonText("Failed!:(");
     // });
+
+    
   };
 
   return (
@@ -48,22 +50,20 @@ export const Contact = () => {
                 </div>
               <Row>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="firstName" placeholder="First Name" value={formDetails.firstName} onChange={(e) => onFormUpdate("firstName", e.target.value)}/>
+                    <input type="text" name="firstName" placeholder="First Name" value={formDetails.firstName} onChange={(e) => onFormUpdate("firstName", e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="text" name="lastName" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => onFormUpdate("lastName", e.target.value)}/>
+                    <input type="text" name="lastName" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => onFormUpdate("lastName", e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="email" name="email" placeholder="Email Address" value={formDetails.email} onChange={(e) => onFormUpdate("email", e.target.value)}/>
+                    <input type="email" name="email" placeholder="Email Address" value={formDetails.email} onChange={(e) => onFormUpdate("email", e.target.value)} required/>
                   </Col>
                   <Col size={12} sm={6} className="px-1">
-                    <input type="tel" name="phone" placeholder="Phone No." value={formDetails.phone} onChange={(e) => onFormUpdate("phone", e.target.value)}/>
+                    <input type="tel" name="phone" placeholder="Phone No." value={formDetails.phone} onChange={(e) => onFormUpdate("phone", e.target.value)} required/>
                   </Col>
                   <Col size={12} className="px-1" date-aos="fade-up">
-                    <textarea rows="6" name="message" placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate("message", e.target.value)}/>
+                    <textarea rows="6" name="message" placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate("message", e.target.value)} required/>
                     <button type="submit"><span>{buttonText}</span></button>
-                    {status.message && <p className={!status.code ? "success" : "error"}>{status.message}</p>
-                    }
                   </Col>
                 </Row>
               </form>
