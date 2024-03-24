@@ -16,7 +16,6 @@ export const Contact = () => {
   const onFormUpdate = (category, value) => {
     setFormDetails({...formDetails, [category]: value});
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setButtonText("Sending..");
@@ -29,7 +28,7 @@ export const Contact = () => {
       setButtonText("Sent!");
       setFormDetails(formInitialDetails); 
     })
-    // .catch((error) => {
+    // .catch(() => {
     //   setButtonText("Failed!:(");
     // });
   };
@@ -63,6 +62,8 @@ export const Contact = () => {
                   <Col size={12} className="px-1" date-aos="fade-up">
                     <textarea rows="6" name="message" placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate("message", e.target.value)}/>
                     <button type="submit"><span>{buttonText}</span></button>
+                    {status.message && <p className={!status.code ? "success" : "error"}>{status.message}</p>
+                    }
                   </Col>
                 </Row>
               </form>
