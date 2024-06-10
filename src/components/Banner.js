@@ -13,7 +13,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(100);
-  const [index, setIndex] = useState(1); 
+  const [index, setIndex] = useState(1);
   const toRotate = ["Web Developer"];
   const period = 1000;
 
@@ -78,10 +78,11 @@ export const Banner = () => {
                     </span>
                   </h3>
                   <p>
-                    Through my studies, I have acquired a solid foundation in
-                    various technologies and programming languages. My goal is
-                    to use these skills to create web projects that are not only
-                    functional, but also visually appealing and easy.
+                    During my studies, I have developed a solid foundation in
+                    various technologies and programming languages. I aspire to
+                    use these skills to create web projects that are not only
+                    functional, but also aesthetically appealing and easy to
+                    use.
                   </p>
                   <button className="tagline">
                     <span>Download CV</span>
