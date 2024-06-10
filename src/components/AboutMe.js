@@ -45,12 +45,12 @@ export const AboutMe = () => {
           >
             <h3>Cristian David</h3>
             <p>
-              I am a web developer based in Bogota City. I have a passion for
-              web development and love to create for web and mobile devices. I
-              have a strong foundation in web development and programming. I am
-              constantly learning new technologies and languages to improve my
-              skills. I am a fast learner and a hard worker. I am always looking
-              for new opportunities to grow and learn.
+              I am a developer based in Bogotá, specializing in web development.
+              With a deep passion for coding, I have built a solid foundation in
+              programming and cybersecurity, continually expanding my expertise
+              by learning new technologies and languages. I am a quick learner,
+              dedicated worker, and always eager to embrace new challenges and
+              opportunities for growth.
             </p>
           </Col>
         </Row>
