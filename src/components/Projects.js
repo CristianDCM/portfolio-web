@@ -85,7 +85,7 @@ export const Projects = () => {
                       responsive={responsive}
                       infinite={true}
                       autoPlay={true}
-                      autoPlaySpeed={3000}
+                      autoPlaySpeed={8000} 
                       className="skill-slider"
                     >
                       {projects.map((project, index) => {
