@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/travel-page.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg2 from "../assets/img/coming soon-1.png";
+import projImg3 from "../assets/img/coming soon-1.png";
 import "animate.css";
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
@@ -36,12 +36,12 @@ export const Projects = () => {
       imgUrl: projImg1,
     },
     {
-      title: "Tittle2",
+      title: "Coming Soon",
       description: "Description",
       imgUrl: projImg2,
     },
     {
-      title: "Tittle3",
+      title: "Coming Soon",
       description: "Description",
       imgUrl: projImg3,
     },
