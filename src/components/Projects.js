@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
+import projImg1 from "../assets/img/travel-page.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import "animate.css";
@@ -31,8 +31,8 @@ const responsive = {
 export const Projects = () => {
   const projects = [
     {
-      title: "Tittle1",
-      description: "Description",
+      title: "TRAVEL",
+      description: "Flights page",
       imgUrl: projImg1,
     },
     {
@@ -42,21 +42,6 @@ export const Projects = () => {
     },
     {
       title: "Tittle3",
-      description: "Description",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Tittle4",
-      description: "Description",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Tittle5",
-      description: "Description",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Tittle6",
       description: "Description",
       imgUrl: projImg3,
     },

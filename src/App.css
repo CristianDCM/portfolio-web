@@ -486,12 +486,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
 }
 .proj-txtx h4 {
+  margin-bottom: 10px;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -502,12 +504,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.proj-txtx .description {
+  margin: 0 0 15px 0;
+}
+
 .proj-txtx button{
   font-weight: 700;
   color: #000;
   background: #fff;
   padding: 14px 48px;
-  margin-top: 10px;
   /* background: linear-gradient(90.21deg, #8718F8 -5.91%, #AA367C 111.58%); */
   transition: 0.3s ease-in-out;
   display: block;
@@ -520,6 +526,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-txtx button:hover {
   color: #fff;
+  background-color: #000; /*Arreglo*/
 }
 .proj-txtx button::before {
   content: "";
