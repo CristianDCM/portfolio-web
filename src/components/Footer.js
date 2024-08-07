@@ -12,16 +12,16 @@ export const Footer = () => {
         <Row className="align-items-center">
           <Col size={12} sm={12} className="text-center text-sm-end">
             <div className="social-icon d-flex justify-content-center">
-              <a href="#" data-aos="fade-right">
+              <a href="https://www.linkedin.com/in/cristiandcm/" target="_blank" data-aos="fade-right">
                 <img src={navIcon1} alt="Icon" />
               </a>
-              <a href="#" data-aos="fade-right" data-aos-duration="300">
+              <a href="https://www.instagram.com/cristianzdmc/" target="_blank" data-aos="fade-right" data-aos-duration="300">
                 <img src={navIcon3} alt="Icon" />
               </a>
-              <a href="#" data-aos="fade-left" data-aos-duration="300">
+              <a href="https://github.com/CristianDCM" target="_blank" data-aos="fade-left" data-aos-duration="300">
                 <img src={navIcon4} alt="Icon" />
               </a>
-              <a href="#" data-aos="fade-left">
+              <a href="https://twitter.com/Cristianzdmc14" target="_blank" data-aos="fade-left">
                 <img src={navIcon5} alt="Icon" />
               </a>
             </div>
