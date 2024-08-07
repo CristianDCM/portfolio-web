@@ -107,13 +107,10 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={1}>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/cristiandcm/" target="_blank">
                   <img src={navIcon1} alt="Linkedin" />
                 </a>
-                <a
-                  href="https://www.instagram.com/cristianzdmc/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/cristianzdmc/" target="_blank">
                   <img src={navIcon3} alt="Instagram" />
                 </a>
                 <a href="https://github.com/CristianDCM" target="_blank">
