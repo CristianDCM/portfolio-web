@@ -35,6 +35,16 @@ export const Projects = () => {
       description: "Flights page",
       imgUrl: projImg1,
     },
+    // {
+    //   title: "Coming Soon",
+    //   description: "Description",
+    //   imgUrl: projImg2,
+    // },
+    // {
+    //   title: "Coming Soon",
+    //   description: "Description",
+    //   imgUrl: projImg3,
+    // },
   ];
 
   const aos = ["fade-down", "fade-left", "fade-right"];
