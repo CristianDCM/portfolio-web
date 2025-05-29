@@ -43,8 +43,6 @@ html::-webkit-scrollbar-track {
   background-color: var(--primary-color);
 }
 
-
-
 body {
   font-weight: 400;   
   overflow-x: hidden; 
@@ -91,7 +89,6 @@ input:focus, textarea:focus, select:focus {
 		padding: 0 150px;
 	}
 }
-
 
 p.success {
 	color: green;
@@ -163,7 +160,6 @@ span.navbar-text {
   margin-right: 0;         
   margin-bottom: 0;
 }
-
 
 @media (max-width: 768px) {
   .social-icon {
@@ -658,4 +654,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 14px;
   color: #B8B8B8;
   letter-spacing: 0.5px;
+}
+
+.footer-social-icon {
+  display: flex;
+  flex-direction: row;      /* Siempre horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.footer-social-icon a {
+  width: 42px;
+  height: 42px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.footer-social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.footer-social-icon a:hover::before {
+  transform: scale(1); 
+}
+
+.footer-social-icon a img {
+  width: 45%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
